@@ -19,9 +19,10 @@ for num_civs in range(2, MAX_CIVS + 2, CIV_STEP_SIZE):
             location = randint(1, NUM_EQUIV_VOLUMES)
             locations.append(location)
         overlap_count = Counter(locations)
-        print(overlap_count) # using these print statements to understand output
+        #print(overlap_count) # using these print statements to understand output
         overlap_rollup = Counter(overlap_count.values())
-        print(overlap_rollup) # Same as above comment, using for understanding
+        #print(overlap_rollup) # Same as above comment, using for understanding
+        #
         num_single_civs += overlap_rollup[1]
 
 prob = 1 - (num_single_civs / (num_civs * TRIALS))
